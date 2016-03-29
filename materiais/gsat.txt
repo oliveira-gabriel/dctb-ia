@@ -1,0 +1,241 @@
+GSat Tracing
+------- ----
+
+GSat é uma «busca gananciosa local" procedimento para a satisfação
+fórmula proposicional na forma CNF. Você foi convidado
+para codificar o algoritmo GSat, e como um primeiro passo, você está
+para codificar uma variação do núcleo deste algoritmo e
+saída de um traço de sua execução.
+
+Uma fórmula proposicional é uma fórmula que contém boolean
+variáveis e os operadores AND, OR e NOT. A propos-
+fórmula de transição que está em «forma normal conjuntiva, ou
+CNF, se ele tem a seguinte sintaxe:
+
+CNF fórmula: = (cláusula e cláusula) *
+cláusula:: = (OR * (literal) literal)
+| Variável literal:: = variável não
+
+Assim, se V1, V2, V3, ... são variáveis boolean, um exem-
+PLE é
+
+(V1 OU NÃO v3) e (não V4 ou V5 ou v2)
+
+Como um atalho que vai escrever uma fórmula semelhante com o
+seguintes modificações:
+
+  A. Nós vamos omitir ou e E é.
+
+  B. Vamos omitir v, que representa variáveis por
+     inteiros.
+
+  C. Vamos substituir Não é por - 's, negando o inteiro
+     representando uma variável que deve ser NOT'ed. Nós
+     omitirá espaço entre o '-' e sua sequência
+     inteiro.
+
+Assim, o exemplo acima se torna:
+
+(1 -3) (-4 5 2)
+ 
+O objetivo do algoritmo GSat é encontrar uma atribuição
+de valores (verdadeiro ou falso) para as variáveis de modo que o dado
+entrada CNF fórmula é satisfeita (avaliada como verdadeira pelo
+regras de álgebra booleana).
+
+O núcleo do algoritmo GSat é:
+
+  1. Atribuir valores (verdadeiro ou falso) para todas as variáveis
+     aleatoriamente.
+
+  2. Se todas as cláusulas forem satisfeitas (assim que a fórmula é
+     satisfeito), pare.
+
+  3. Para cada variável i, calcule o número de cláusulas
+     N [i] que ficará satisfeito se apenas o valor da
+     variável i é alterado.
+
+  4. Formam o conjunto de variáveis cujo S N [i] é máxima.
+
+  5. Escolha uma variável aleatória de S e alterar o seu
+     valor.
+
+  6. Retorne ao passo 2.
+
+Você foi convidado para o programa de uma primeira versão deste
+GSat núcleo que substitui escolhas aleatórias como segue:
+
+  1. Na etapa 1, as atribuições de variáveis iniciais são
+     entrada.
+ 
+  5. Na etapa 5, em vez de escolher uma variável S
+     aleatoriamente, a variável i com o menor valor
+     de
+     
+     (I - iteração) mod V
+
+     é escolhido, onde «iteração é a iteração núme-
+     ber, 1, 2, 3, etc, e V é o número de vari-
+     veis. Isso equivale a começar a pesquisar as variáveis-
+     ning com a variável
+
+     ((Iteração - 1) mod V) + 1
+
+     e envolvimento em torno de V variável à variável 1,
+     escolher a primeira variável com um máximo de N [i] que
+     é encontrado.
+
+Você está convidado a imprimir todas as alterações variável na etapa
+5 º e o conjunto de cláusulas atualmente insatisfeito no passo
+2.
+
+Para simplificar a implementação, GSat é normalmente programada
+para executar apenas em CNF fórmula cujas cláusulas conter no máximo
+3 literais. Todos fórmula CNF podem ser facilmente convertidos em
+tal forma. Para tornar mais fácil de codificação, é necessário que todos os
+cláusulas tenham exatamente 3 literais. Para fazer este trabalho, nós
+introduzir a variável especial v0 cujo valor é sempre
+falsa. Assim, a cláusula (v1 ou v2) com dois literais é
+mudou a cláusula (V1 ou V2 ou v0), com três
+literais, o último dos quais, v0, é sempre falso.
+
+ 
+Entrada
+-----
+
+Para cada fórmula, inteiros V, C, e eu, nessa ordem,
+que são respectivamente o número de variáveis, a
+número de cláusulas, bem como o número máximo de algoritmo
+iterações. 1 <= <= 100 V, 1 <= C <= 100 e 1 <= I
+<= 100. Estas são seguidas por números inteiros V, cada um repre-0
+tando «falso» ou «1 representando verdadeiro", que são os
+valores iniciais das variáveis, a fim de variável
+V. 1 a variável E estes são acompanhados pelo
+cláusulas, representada como uma seqüência de números inteiros, usando
+as abreviaturas acima. À medida que cada cláusula ex-
+actly 3 literais, parênteses seria redundante infor-
+informação e, portanto, omitida. Se a cláusula contém
+variável de 0, ele é o último de uma ou duas variáveis do
+cláusula.
+
+A entrada termina com uma linha contendo 3 zeros.
+
+
+Saída
+------
+
+Para cada conjunto de dados, em primeiro lugar uma única linha contendo
+»Fórmula #" onde # é 1, 2, 3, etc, o número de
+fórmula na entrada.
+
+Então cada passo de tempo 2 é executado, uma ou mais linhas
+contendo as cláusulas que não estão satisfeitos. Cada
+cláusula é representada por três inteiros fechados em
+parênteses, com cláusulas de estarem separados por um espaço.
+inteiros consecutivos são separados por um espaço, mas par-
+enteses não são separados por um espaço de números inteiros. Se
+há mais de 5 cláusulas, em seguida, exatamente 5 cláusulas
+são impressos em cada linha, mas a última, que pode ter
+1-5 cláusulas. As cláusulas devem ser impressos na ordem
+eles foram introduzidos.
+ 
+Como um caso especial, se não há cláusulas insatisfeito
+na etapa 2, imprimir uma única linha contendo apenas `FEITO"
+e parar o algoritmo.
+
+Por fim, cada passo de tempo de 5 a executar quer imprimir
+`# = True 'ou' # = false" para indicar que a variável #
+foi atribuído o novo valor `true 'ou' falso '
+, respectivamente.
+
+A execução do algoritmo deve parar imediatamente após
+o algoritmo executa o passo 2 para o I +1' ª vez, se
+execução não tenha parado porque a fórmula
+estava satisfeito.
+
+
+Exemplo de entrada
+------ -----
+
+4 5 10
+0 0 0 0
+ 1 2 0
+ 2 3 0
+ 3 4 0
+ 4 -1 0
+-1 -2 0
+4 4 10
+0 0 0 0
+ 1 -2 0
+ 2 -3 0
+ 3 -4 0
+ 4 0 0
+4 5 8
+1 0 0 1
+-2 3 0
+-3 4 0
+-4 -2 0
+ 1 2 0
+-1 2 0
+0 0 0
+ 
+
+Saída da amostra
+------ ------
+
+Fórmula 1
+(1 2 0) (2 3 0) (3 4 0)
+2 = true
+(3 4 0)
+3 = true
+FEITO
+Fórmula 2
+(4 0 0)
+1 = true
+(4 0 0)
+2 = true
+(4 0 0)
+3 = true
+(4 0 0)
+4 = true
+FEITO
+Fórmula 3
+(-1 2 0)
+1 = false
+(1 2 0)
+3 = true
+(1 2 0)
+3 = false
+(1 2 0)
+4 = false
+(1 2 0)
+1 = true
+(-1 2 0)
+2 = true
+(-2 3 0)
+3 = true
+(-3 4 0)
+4 = true
+(-4 -2 0)
+
+ 
+Notas:
+-----
+
+O algoritmo GSat completa executa o algoritmo core alguns
+número de vezes, e reivindica, talvez erradamente, que
+a fórmula é insatisfatível se nenhum desses funciona
+produz uma atribuição de variável satisfatória. Cada núcleo
+pára de funcionar após um certo número de iterações, se falhar
+para encontrar uma atribuição de variável satisfatória. GSat Full tem
+um bom registo de encontrar atribuições de variáveis de satisfação
+se eles existem para algumas classes importantes de fórmulas.
+
+O documento original é GSat Selman, Levesque e
+Mitchell, um novo método para a resolução de satisfatibilidade Hard
+Problemas, Proc Conf 10 sobre AI (AAAI-92), julho de 1992,
+440-446.
+
+
+
+

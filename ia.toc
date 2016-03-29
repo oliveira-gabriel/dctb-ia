@@ -1,0 +1,113 @@
+\select@language {brazil}
+\contentsline {section}{\numberline {1}Informa\c c\~oes da Disciplina}{6}
+\contentsline {section}{\numberline {2}L\'ogica}{7}
+\contentsline {subsection}{\numberline {2.1}L\'ogica Proposicional}{7}
+\contentsline {subsubsection}{\numberline {2.1.1}Linguagem}{9}
+\contentsline {subsubsection}{\numberline {2.1.2}Sem\^antica}{10}
+\contentsline {subsubsection}{\numberline {2.1.3}Axiom\'atica}{10}
+\contentsline {section}{\numberline {3}Linguagem}{10}
+\contentsline {subsection}{\numberline {3.1}Proposi\c c\~ao}{10}
+\contentsline {subsection}{\numberline {3.2}S\IeC {\'\i }mbolos proposicionais}{11}
+\contentsline {subsection}{\numberline {3.3}Conectivos}{11}
+\contentsline {subsection}{\numberline {3.4}Constantes}{11}
+\contentsline {subsection}{\numberline {3.5}Separadores}{11}
+\contentsline {subsection}{\numberline {3.6}F\'ormulas}{11}
+\contentsline {subsection}{\numberline {3.7}Subf\'ormula}{12}
+\contentsline {subsection}{\numberline {3.8}Substitui\c c\~ao Uniforme}{12}
+\contentsline {section}{\numberline {4}Teoria dos Modelos (Sem\^antica)}{12}
+\contentsline {subsection}{\numberline {4.1}Interpreta\c c\~ao}{14}
+\contentsline {subsection}{\numberline {4.2}Interpreta\c c\~ao das F\'ormulas}{14}
+\contentsline {subsection}{\numberline {4.3}Modelo}{15}
+\contentsline {subsection}{\numberline {4.4}Validade}{15}
+\contentsline {subsection}{\numberline {4.5}Satisfabilidade}{16}
+\contentsline {subsection}{\numberline {4.6}Consequ\^encia L\'ogica}{16}
+\contentsline {section}{\numberline {5}Teoria da Prova (Axiom\'atica)}{16}
+\contentsline {subsection}{\numberline {5.1}Sistema Dedutivo de Hilbert}{17}
+\contentsline {subsubsection}{\numberline {5.1.1}Modus Ponens}{17}
+\contentsline {subsection}{\numberline {5.2}Exemplo utilizando axiom\'atica de Hilbert e Modus Ponens}{18}
+\contentsline {subsection}{\numberline {5.3}Instanciando um Axioma}{19}
+\contentsline {subsection}{\numberline {5.4}Prova ($\vdash $)}{19}
+\contentsline {subsubsection}{\numberline {5.4.1}Propriedades}{19}
+\contentsline {subsubsection}{\numberline {5.4.2}Adequa\c c\~ao}{20}
+\contentsline {subsubsection}{\numberline {5.4.3}Substitui\c c\~ao}{20}
+\contentsline {subsection}{\numberline {5.5}Teoremas}{20}
+\contentsline {subsubsection}{\numberline {5.5.1}Teorema da Adequa\c c\~ao}{20}
+\contentsline {subsubsection}{\numberline {5.5.2}Teorema da Completude}{20}
+\contentsline {subsubsection}{\numberline {5.5.3}Teorema da Dedu\c c\~ao}{20}
+\contentsline {subsubsection}{\numberline {5.5.4}Teorema da Consequ\^encia L\'ogica}{21}
+\contentsline {subsubsection}{\numberline {5.5.5}Decibilidade}{21}
+\contentsline {subsection}{\numberline {5.6}Equival\^encias}{21}
+\contentsline {subsection}{\numberline {5.7}Teorema de Morgan}{22}
+\contentsline {subsection}{\numberline {5.8}F\'ormula Normal Conjuntiva}{22}
+\contentsline {subsection}{\numberline {5.9}Transforma\c c\~ao em FNC}{23}
+\contentsline {subsection}{\numberline {5.10}Princ\IeC {\'\i }pio da Resolu\c c\~ao}{23}
+\contentsline {subsubsection}{\numberline {5.10.1}Regra da Resolu\c c\~ao}{24}
+\contentsline {subsubsection}{\numberline {5.10.2}Exemplo de Prova por Resolu\c c\~ao}{24}
+\contentsline {subsubsection}{\numberline {5.10.3}Estrat\'egia Linear das Cl\'ausulas Ordenadas (OL - Resolu\c c\~ao)}{25}
+\contentsline {subsubsection}{\numberline {5.10.4}\'Arvore de Prova}{28}
+\contentsline {subsection}{\numberline {5.11}Sistema de Tableau}{28}
+\contentsline {subsubsection}{\numberline {5.11.1}Regras}{29}
+\contentsline {subsubsection}{\numberline {5.11.2}Teoremas}{29}
+\contentsline {subsubsection}{\numberline {5.11.3}Estrat\'egia}{30}
+\contentsline {subsubsection}{\numberline {5.11.4}Busca pelo Resultado}{30}
+\contentsline {subsubsection}{\numberline {5.11.5}Exemplos}{30}
+\contentsline {section}{\numberline {6}L\'ogica de Predicados de 1\IeC {\textordfeminine } Ordem}{33}
+\contentsline {subsection}{\numberline {6.1}Linguagem}{33}
+\contentsline {subsection}{\numberline {6.2}Escopo de um Quantificador}{34}
+\contentsline {subsection}{\numberline {6.3}Vari\'avel Livre/Ligada}{34}
+\contentsline {subsection}{\numberline {6.4}F\'ormula Fechada/Aberta}{34}
+\contentsline {subsection}{\numberline {6.5}Substitui\c c\~ao de Vari\'aveis}{34}
+\contentsline {subsection}{\numberline {6.6}Teoria dos Modelos (Sem\^antica)}{35}
+\contentsline {subsubsection}{\numberline {6.6.1}Interpreta\c c\~ao}{35}
+\contentsline {subsubsection}{\numberline {6.6.2}Interpreta\c c\~ao de Termos e F\'ormulas}{36}
+\contentsline {subsubsection}{\numberline {6.6.3}Satisfabilidade}{37}
+\contentsline {subsubsection}{\numberline {6.6.4}Validade}{37}
+\contentsline {subsubsection}{\numberline {6.6.5}Consequ\^encia L\'ogica}{37}
+\contentsline {subsection}{\numberline {6.7}Teoria da Prova (Axiom\'atica)}{37}
+\contentsline {subsubsection}{\numberline {6.7.1}Regras de Infer\^encia}{37}
+\contentsline {subsection}{\numberline {6.8}Formas Normais}{38}
+\contentsline {subsubsection}{\numberline {6.8.1}Equival\^encias}{39}
+\contentsline {subsubsection}{\numberline {6.8.2}Troca de Nomes}{39}
+\contentsline {subsubsection}{\numberline {6.8.3}Distribui\c c\~ao}{39}
+\contentsline {subsubsection}{\numberline {6.8.4}Alargamento do Escopo dos Quantificadores}{39}
+\contentsline {subsection}{\numberline {6.9}Troca de Quantificadores}{40}
+\contentsline {subsection}{\numberline {6.10}Forma Normal Prenex}{40}
+\contentsline {subsection}{\numberline {6.11}Forma Normal de Skolen}{41}
+\contentsline {subsubsection}{\numberline {6.11.1}Algoritmo}{42}
+\contentsline {subsection}{\numberline {6.12}Forma Normal Conjuntiva}{43}
+\contentsline {subsection}{\numberline {6.13}Resolu\c c\~ao}{43}
+\contentsline {subsubsection}{\numberline {6.13.1}Unificador de uma Substitui\c c\~ao $s$}{43}
+\contentsline {subsubsection}{\numberline {6.13.2}Algor\IeC {\'\i }tmo}{44}
+\contentsline {subsection}{\numberline {6.14}M\'etodo da Resolu\c c\~ao para L\'ogica de Primeira Ordem}{45}
+\contentsline {subsubsection}{\numberline {6.14.1}Resolvente}{45}
+\contentsline {subsubsection}{\numberline {6.14.2}Fator}{46}
+\contentsline {subsection}{\numberline {6.15}Automatiza\c c\~ao do Processo}{51}
+\contentsline {subsubsection}{\numberline {6.15.1}Resolu\c c\~ao por Satura\c c\~ao}{52}
+\contentsline {subsection}{\numberline {6.16}Aumentando a Efici\^encia}{53}
+\contentsline {section}{\numberline {7}Espa\c co de Pesquisa}{53}
+\contentsline {section}{\numberline {8}Conjunto Suporte}{54}
+\contentsline {subsection}{\numberline {8.1}Vantagem}{54}
+\contentsline {section}{\numberline {9}Resolu\c c\~ao Linear}{55}
+\contentsline {subsection}{\numberline {9.1}Dedu\c c\~ao Linea de Entrada}{57}
+\contentsline {subsection}{\numberline {9.2}Resolu\c c\~ao de Entrada}{57}
+\contentsline {subsection}{\numberline {9.3}Cl\'ausula de Horn}{57}
+\contentsline {subsection}{\numberline {9.4}Resolu\c c\~ao Unit\'aria}{57}
+\contentsline {subsection}{\numberline {9.5}Maquina de Infer\^encia x \'Arvore de Prova}{57}
+\contentsline {subsection}{\numberline {9.6}Dicas de Implementa\c c\~ao para \'Arvore de Prova em L\'ogica de Predicados}{58}
+\contentsline {section}{\numberline {10}Racioc\IeC {\'\i }nio com A\c c\~oes}{59}
+\contentsline {subsection}{\numberline {10.1}C\'alculo de Situa\c c\~oes}{59}
+\contentsline {subsection}{\numberline {10.2}Strips}{60}
+\contentsline {subsection}{\numberline {10.3}Um exemplo de problema STRIPS}{61}
+\contentsline {subsection}{\numberline {10.4}Busca Heur\IeC {\'\i }tica}{63}
+\contentsline {subsection}{\numberline {10.5}Grafo de Planos}{63}
+\contentsline {subsubsection}{\numberline {10.5.1}Rela\c c\~ao de Exclus\~ao M\'utua (Mutex)}{64}
+\contentsline {subsection}{\numberline {10.6}Heur\IeC {\'\i }stica Aliada com Grafo de Planos}{64}
+\contentsline {section}{\numberline {11}SatPlan}{65}
+\contentsline {subsection}{\numberline {11.1}Linguagem}{65}
+\contentsline {subsection}{\numberline {11.2}Problemas}{66}
+\contentsline {subsubsection}{\numberline {11.2.1}Frame Axioms}{66}
+\contentsline {subsubsection}{\numberline {11.2.2}Modelos An\^omanos}{66}
+\contentsline {section}{\numberline {12}Planejamento como Satisfabilidade}{66}
+\contentsline {subsection}{\numberline {12.1}Vantagens (Algumas)}{67}
+\contentsline {subsection}{\numberline {12.2}An\'alise}{68}
+\contentsline {subsection}{\numberline {12.3}Resultados obtidos pelo SatPlan}{68}

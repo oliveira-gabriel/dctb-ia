@@ -1,0 +1,543 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"><title>
+ Definições </title>
+
+</head><body vlink="DARKRED" alink="#ff0000" bgcolor="#fffff0" 
+link="DARKBLUE" text="BLACK">
+
+<dl>
+<dt> <a name="llpo"><font color="red" size="+1">Linguagem da lógica de 
+primeira ordem </font> </a>
+
+</dt><dd> Uma linguagem da lógica de primeira ordem (lpo) <i> L</i> é
+construída a partir de um conjunto numerável de símbolos variáveis <i>
+X, Y, Z, ... </i>; um conjunto numerável de símbolos de função de
+aridade n, <i> n &gt;= 0 </i>, <i> f<sup>n</sup>, g<sup>n</sup>, ...</i>;
+um conjunto numerável de símbolos de predicados de aridade n, <i> n 
+&gt;=
+0 </i>,<i> p<sup>n</sup>, q<sup>n</sup>, ...</i>; conectivas <i>/\</i>
+(conjunção), <i>\/</i> (disjunção), <i>~</i> (negação), <i>=&gt;</i>
+(implicação), <i>&lt;=&gt;</i> (equivalência); os quantificadores
+<i>forall</i> e <i>exists</i>. Os símbolos de função de aridade zero
+são denotados por <i>a, b, c, d, ...</i> e designados por constantes e
+os de aridades superiores são designados functores (ou funcionais).
+Uma sequência finita de símbolos de <i> L</i> diz-se uma expressão.
+<p> </p><dl> <dt> Um <b> termo </b> é
+
+</dt><dd>  uma variável, uma constante ou se <i>f<sup>n</sup></i> é
+um functor de aridade <i>n&gt;= 1</i> e <i>t<sub>1</sub>,...,
+t<sub>n</sub></i> são termos então
+<i>f(t<sub>1</sub>,...,t<sub>n</sub>)</i> é um termo. 
+
+</dd><dt> Uma <b>fórmula atómica (ou predicado)</b> é
+</dt><dd> <i> p(t<sub>1</sub>,...,t<sub>n</sub>)</i>, onde
+<i>p<sup>n</sup></i> é um símbolo de predicado e <i>t<sub>1</sub>,...,
+t<sub>n</sub></i> são termos.
+<p>
+</p></dd><dt> Uma <b>fórmula</b> é
+</dt><dd> 
+uma fórmula atómica ou se <i>W</i>,
+<i>W<sub>1</sub></i> e <i>W<sub>2</sub></i> são fórmulas e
+<i>X</i> variável, então são fórmulas
+<ul>
+<li> <i>(~W)</i> <i>
+</i></li><li><i> (W<sub>1</sub> /\
+W<sub>2</sub>)</i>
+</li><li> <i> (W<sub>1</sub> \/ W<sub>2</sub>)</i>
+</li><li><i> (W<sub>1</sub> =&gt; W<sub>2</sub>)</i>
+</li><li> <i> (W<sub>1</sub> &lt;=&gt; W<sub>2</sub>)</i>
+</li><li> <i>(forall X W)</i>
+</li><li> <i>(exists X W)</i> 
+</li></ul>
+
+<p>
+</p></dd><dt>  Uma variável <i>X</i> ocorre <b>livre</b> numa fórmula <i>W</i>
+ se 
+</dt><dd>
+<ol type="alpha">
+  <li> <i>W</i> é uma fórmula atómica e <i>X</i> ocorre em <i>W</i>;
+  </li><li> <i>W</i> é<i>~W<sub>1</sub></i> e <i>X</i> ocorre livre em <i>W<sub>1</sub></i>;
+  </li><li> <i>W</i> é <i>W<sub>1</sub>/\W<sub>2</sub></i> ou <i>W<sub>1</sub>\/W<sub>2</sub></i>
+ e <i>X</i> ocorre
+    livre em <i>W<sub>1</sub></i>  ou <i>W<sub>2</sub></i>;
+  </li><li>  <i>W</i> é <i>forall Y W<sub>1</sub></i> e <i>X&lt;&gt;Y</i>
+ e <i>X</i>  ocorre livre
+    em <i>W<sub>1</sub></i>.
+  </li></ol> 
+<p> 
+
+</p></dd><dt> Uma variável ocorre <b>ligada</b> numa fórmula
+<i>W</i> se não ocorrer livre.
+<p>
+</p></dt><dt> Um <b> termo fechado </b> é um termo sem variáveis.
+<p>
+</p></dt><dt> Uma <b>fórmula fechada (ou sentença) </b> é
+</dt><dd> uma fórmula  em que nenhuma variável ocorre
+livre.  
+<p>
+</p></dd><dt>
+Se <i>W</i> é uma fórmula, então <i>forall W</i> denota o <b> fecho 
+universal</b> de <i>W</i>, que é a fórmula fechada que se obtém de <i>W</i>
+adicionando um quantificador universal para cada variável que ocorre
+livre em <i>W</i>. 
+Analogamente, definimos <i>exists W</i>, o <b> fecho
+existencial </b> de <i>W</i>.
+
+
+</dt></dl>
+<p>
+</p></dd><dt>
+<a name="formaclausal"><font color="red" size="+1">Forma clausal</font> </a>
+</dt><dd>
+<p><i>prefixo-universal</i> <i>matriz</i>
+</p><p>
+  <i>prefixo-universal</i> é uma sequência de
+quantificadores universais <i>(forall X)(forall Y)</i>...
+</p><p>
+<i>matriz</i> uma conjunção de disjunções
+de literais,  onde um <b>literal</b> é um predicado atómico (positivo) 
+ou a
+sua negação (negativo).
+</p><p>
+Sendo 
+</p><p>
+<i> forall X (A /\ B) &lt;=&gt;  forall X (A) /\ forall X (B) </i>
+</p><p>
+
+podemos representar uma frase
+em forma clausal por um conjunto de 
+<b> cláusulas</b>, implicitamente conjugadas.
+</p><p>
+</p></dd><dt>
+<p> <a name="formacondicional"><font color="red" size="+1"> Forma 
+condicional </font></a>
+
+</p></dt><dd> Cada cláusula (disjunções de literais) pode ser escrita na
+ forma
+condicional
+<p>
+
+<i> disjunção de literais </i> &lt;= <i> conjunção de literais </i> 
+</p><p>
+
+</p></dd><dt>
+<a name="tiposclau"><font color="red" size="+1">Classificação de 
+cláusulas</font></a>
+</dt><dd>
+<dl>
+<dt> <b> Definida (ou Regra)</b>
+</dt><dd> contém exactamente um literal positivo e zero ou mais
+negativos
+<p>
+
+<table align="center" border="1" bordercolor="red">
+<tbody><tr> <th>Forma clausal </th> <th> Cláusula </th> <th>Forma 
+condicional </th>
+<th> Prolog </th></tr>
+
+<tr> 
+<td>
+forall (A \/ ~B<sub>1</sub> \/ ... \/ ~B<sub>n</sub>)</td>
+<td> {A,~B<sub>1</sub>, ..., ~B<sub>n</sub>}</td> 
+<td> A &lt;= B<sub>1</sub> /\ ... /\ B<sub>n</sub> </td>
+ <td> A :-  B<sub>1</sub>, ..., B<sub>n</sub>. </td>
+</tr>
+</tbody></table>
+</p><p>
+</p></dd><dt> <b> Unitária (Factos ou asserções) </b>
+</dt><dd> cláusula definida sem literais negativos
+<p>
+<table align="center" border="1" bordercolor="red" cellpadding="5">
+<tbody><tr> <th>Forma clausal </th> <th> Cláusula </th> <th>Forma 
+condicional </th>
+<th> Prolog </th></tr>
+<tr> 
+<td>
+forall (A)</td>
+<td> {A}</td> 
+<td> A &lt;= Verdade  </td>
+ <td> A. </td>
+</tr>
+<tr><td bordercolor="red">  </td> <td></td><td> A &lt;= </td><td> </td><td>
+ </td></tr>
+</tbody></table>
+</p><p>
+</p></dd><dt> <b>Negativa (pergunta ou objectivo)</b>
+</dt><dd> contém zero ou mais literais negativos e nenhum positivo
+<p>
+<table align="center" border="1" bordercolor="red">
+<tbody><tr> <th>Forma clausal </th> <th> Cláusula </th> <th>Forma 
+condicional </th>
+<th> Prolog </th></tr>
+<tr> 
+<td>
+forall (~B<sub>1</sub> \/ ... \/ ~B<sub>n</sub>)</td>
+<td> {~B<sub>1</sub>, ..., ~B<sub>n</sub>}</td> 
+<td> Falso &lt;= B<sub>1</sub> /\ ... /\ B<sub>n</sub> </td>
+ <td> ?- B<sub>1</sub>, ..., B<sub>n</sub>. </td>
+</tr>
+<tr> 
+<td>
+~ exists B<sub>1</sub> /\... /\B<sub>n</sub>)</td>
+<td> </td><td> &lt;= B<sub>1</sub> /\ ... /\ B<sub>n</sub> </td></tr>
+</tbody></table>
+</p><p>
+
+</p></dd><dt> <b>Vazia (Falso)</b>
+</dt><dd> cláusula negativa sem literais
+<p>
+<table align="center" border="1" bordercolor="red">
+<tbody><tr> <th>Forma clausal </th> <th> Cláusula </th> <th>Forma 
+condicional </th>
+<th> Prolog </th></tr>
+<tr> 
+<td>
+Falso</td>
+<td> { }</td> 
+<td> Falso &lt;= True </td>
+ <td> </td>
+</tr>
+
+</tbody></table>
+</p><p>
+</p></dd><dt> <b> de Horn </b> 
+</dt><dd> cláusulas definidas ou negativas 
+</dd></dl>
+<p>
+</p></dd><dt><a name="conjuntosdeclau"><font color="red" size="+1">Classificação
+ de conjuntos de cláusulas</font></a>
+</dt><dd>
+</dd><dt> <b> Programa ou base de dados </b>
+</dt><dd> conjunto de cláusulas não-negativas
+</dd><dt> <b> Programa definido </b>
+</dt><dd> programa só com cláusulas definidas
+</dd><dt> <b> Definição de um Predicado </b>
+</dt><dd> conjunto de cláusulas definidas cujos literais positivos têm 
+todos o mesmo símbolo de predicado 
+
+</dd><dt>
+<a name="reducaoclausal"> <font color="red" size="+1"> Conversão em 
+forma clausal </font> </a>
+<p>
+</p></dt><dd> Qualquer fórmula da lógica de primeira ordem pode ser 
+convertida numa equivalente em forma clausal (ou como um conjunto de 
+cláusulas).
+
+<dl>
+<dt> <b> Eliminação de implicações </b> </dt><dd> <i> P =&gt; Q </i> é
+equivalente a <i> ~P \/ Q</i> </dd><dt> <b> Mover as negações para 
+dentro
+</b> </dt><dd> <ul>
+   <li> <i> ~ (P \/ Q )</i>  para  <i> ~ P /\ ~ Q </i> 
+   </li><li> <i> ~ (P /\ Q )</i>  para  <i> ~ P \/ ~ Q </i> 
+   </li><li> <i> ~ ( forall X  P </i>  para  <i> exists X  ~ P </i> 
+   </li><li> <i> ~ ( exists X  P </i>  para  <i> forall X  ~ P </i>
+   </li><li> <i> ~ ~ P </i>  para  <i> P </i>  
+   </li></ul>
+</dd><dt> <b> Se necessário mudar o nome de variáveis quantificadas </b>
+</dt><dt> <b> Distribuir as disjunções </b>
+</dt><dd>  <ul>
+   <li> <i> P \/ (P1 /\ P2) </i> para <i>( P \/ P1) /\ ( P \/ P2) </i>
+   </li><li> <i> P \/ (forall X P1) </i> para <i> ( forall X ) (P \/ P1)
+ </i>
+   </li><li> <i> P \/ (exists X P1) </i> para <i> ( exists X ) (P \/ P1)
+ </i>
+</li></ul>
+</dd><dt> <b> Distribuir os quantificadores universais </b>
+</dt><dd>
+   <i> (forall X)(P1 /\ P2) </i> para <i> (forall X)P1 /\ (forall X) P2 </i>
+</dd><dt> <b> Eliminar quantificadores existênciais (Skolemizar) </b>
+</dt><dd>
+<i> (forall X1)(forall X2)... (forall Xn) (exists Y) P(Y) </i>
+
+para
+
+<i> (forall X1)(forall X2)... (forall Xn)P(f(X1,...,Xn)) </i>
+
+<p> onde <i>f</i> é um novo símbolo de função.
+</p></dd></dl>
+
+<p>
+</p></dd><dt>
+<a name="substituicao"><font color="red" size="+1"> Substituições </font>
+ </a>
+</dt><dt> Uma substituição <i>S</i> é
+</dt><dd>  uma função do conjunto de variáveis no conjunto de termos, 
+tal que o conjunto das variáveis <i>X<sub>i</sub></i>, tal que <i> S(X<sub>i</sub>)&lt;&gt;
+ X<sub>i</sub></i> é <b> finito </b>. Assim, podemos escrever 
+<i> S={X<sub>1</sub>/t<sub>1</sub>, ..., X<sub>n</sub>/t<sub>n</sub>}</i>.
+<p>
+</p></dd><dt>
+Sendo <i>E</i> um termo ou uma fórmula, uma  <b>instância</b> 
+  de <i>E</i> por <i>S</i>, denota-se por <i>ES</i> e é a expressão que 
+se obtém
+  substituindo simultaneamente cada ocorrência livre de
+<i>X<sub>i</sub></i> em <i>E</i> por <i>t<sub>i</sub></i>, para todo
+<i>1&lt;= i &lt;= n</i>.  
+
+<p> 
+</p></dt><dt> A substituição <b>identidade</b> é 
+</dt><dd> a substituição <i>S={}</i> e denotamos habitualmente por <i>epsilon</i>.
+<p>
+</p></dd><dt> Uma substituição <i>S</i> é <b>idempotente</b> </dt><dd> 
+se para qualquer expressão <i>E</i>, <i>(ES)S=S</i>.  Em
+particular, se <i> S={X<sub>1</sub>/t<sub>1</sub>, ...,
+X<sub>n</sub>/t<sub>n</sub>}</i> nenhum dos <i>X<sub>i</sub></i>
+ocorrem em nenhum dos <i><sub>j</sub></i>. Vamos apenas considerar <b> 
+válidas </b> as substituições idempotentes.
+ 
+</dd><dt> A <a name="composicao"><b> composição </b></a> de duas 
+substituições válidas
+(idempotentes) 
+
+</dt><dd> <i> S={X<sub>1</sub>/t<sub>1</sub>, ...,
+X<sub>m</sub>/t<sub>m</sub>}</i> e <i> T={Y<sub>1</sub>/s<sub>1</sub>,
+..., Y<sub>n</sub>/s<sub>n</sub>}</i> denota-se por <i> S o T </i> e
+define-se por:
+
+<pre> {X<sub>1</sub>/t<sub>1</sub>T, ..., X<sub>m</sub>/t<sub>m</sub>T} U {Y<sub>j</sub>/s<sub>j</sub> | Y<sub>j</sub> não pertencem a {X<sub>1</sub>,...,X<sub>n</sub>}}
+</pre>
+
+<p> Note-se que a composição pode não ser uma substituição
+válida. Contudo verifica  as seguintes propriedades: para qualquer
+fórmula <i> W </i>, <i> W(S o T)=(WS)T </i> e <i> S o (S<sub>1</sub> o
+S<sub>2</sub>) = (S o S<sub>1</sub>) o S<sub>2</sub> </i>.
+</p><p>
+</p></dd><dt> <a name="unificador"><font color="red" size="+1"> 
+Unificador
+mais-geral</font></a> </dt><dd> Um unificador de duas expressões
+<i>E<sub>1</sub></i> e <i>E<sub>2</sub></i> é uma substituição
+<i>T</i> tal que <i>E<sub>1</sub>T=E<sub>2</sub>T</i>. Um unificador
+<i>U</i> é o <b>mais geral</b> de duas expressões se e só se para 
+qualquer
+outro unificador <i>S</i> de <i>E<sub>1</sub></i> e
+<i>E<sub>2</sub></i>, existe uma substituição <i>S<sub>1</sub></i> tal
+que <i>(E<sub>1</sub>U)S<sub>1</sub>=E<sub>1</sub>S</i>.
+
+
+</dd><dt><a name="derivabilidade"><font color="red" size="+1"> 
+Derivabilidade </font></a>
+
+</dt><dd> Um sistema de inferência é constituído por um conjunto de
+fórmulas fechadas <i>F</i>, designadas por <b>axiomas</b>
+(não-lógicos), e um conjunto de regras de inferência <i>R</i>.  <p>
+
+Uma fórmula fechada <i>W</i> <b>deriva-se</b> de <i>S</i> usando
+<i>R</i> se existe uma sequência de fórmulas (demonstração, prova ou
+derivação) <i>W<sub>1</sub>,...,W<sub>n</sub></i> tal que cada
+<i>W<sub>i</sub></i> é um axioma ou resulta da aplicação duma regra de
+inferência a um subconjunto de elementos da sequência que o precedem e
+<i>W<sub>n</sub></i> é <i>W</i>.
+
+</p><p> Se uma fórmula se pode derivar dum sistema de inferência diz-se
+que é um <b>teorema</b> (desse sistema).
+</p><p>
+</p></dd><dt> Regra de inferência <i> Modus ponens </i>
+</dt><dd> <pre><i> { B &lt;= A, A } |- B </i></pre>
+<p> (De <i>A =&gt;B</i> e de <i>A</i>, derivar <i>B</i>).
+</p><p> 
+</p></dd><dt> Regra de inferência <i> Modus tollens </i>
+</dt><dd> <pre> { ~A, B &lt;= A} |- ~B </pre>
+<p> (De <i>~A</i> e de <i>A =&gt;B</i>, derivar <i>~B</i>).
+</p><p></p></dd><dt>
+O sistema de  inferência <i>(F,R)</i> deve ser <b>integro</b>, isto é, 
+se <i> W </i> se deriva de <i>F</i> por <i>R</i>, então <i>W</i> é uma 
+consequência lógica de <i>F</i>. 
+
+<p>
+</p></dt><dt> <b> Universo de Herbrand </b> 
+
+</dt><dd> Conjunto dos termos fechados
+que se podem construir a partir do conjunto de símbolos de funções
+(constantes e functores) duma linguagem lpo.
+<p> 
+
+</p></dd><dt> <a name="contradicao"> <b>Demonstração por contradição </b></a>
+</dt><dd> Uma fórmula fechada <i>W</i> é uma consequência lógica de um
+conjunto de fórmulas fechadas <i>S</i> se e só se <i>Falso</i> se deriva
+  de <i>S U {~W}</i>. 
+<p>
+</p></dd><dt><a name="resolucao"><font color="red" size="+1"> Resolução </font></a>
+</dt><dd> é uma regra de inferência aplicável a fórmulas em forma
+clausal. Dadas duas cláusulas, por resolução deriva-se uma nova
+cláusula que é consequência lógica das primeiras. 
+
+Para a lógica proposicional temos 
+
+<pre>   { ~A \/ B, A \/ C } |- {B \/ C}
+</pre>
+<p> ou em forma condicional 
+</p><pre>  { B &lt;= A, A &lt;= ~ C } |- { B &lt;= ~ C}
+</pre>
+<p>
+
+Qualquer conjunto de cláusulas de Horn <i> P </i> é não satisfazível
+se e só se <i>Falso</i> se deriva por resolução de <i> P </i>. Para um
+conjunto de cláusulas arbitrárias é necessário utilizar outras regras
+de inferência.
+</p><p>
+
+Para fórmulas  de lógica de primeira ordem  em forma clausal
+
+</p><pre>   { ~P<sub>1</sub> \/  P<sub>2</sub> \/... \/ P<sub>n</sub> , Q<sub>1</sub> \/  Q<sub>2</sub> \/  ... \/ Q<sub>m</sub>} |- {(P<sub>2</sub>\/... \/ P<sub>n</sub> \/ Q<sub>2</sub> \/  ... \/ Q<sub>m</sub>)U}
+</pre>
+
+onde <tt> U </tt> é o unificador mais geral de <tt>P<sub>1</sub></tt> e
+<tt>Q<sub>1</sub></tt>
+
+ou para conjuntos de cláusulas 
+<pre>   { {~P<sub>1</sub>, P<sub>2</sub>, ..., P<sub>n</sub>} ,{Q<sub>1</sub>, Q<sub>2</sub>, ... ,Q<sub>m</sub>}} |- { {P<sub>2</sub>,..., P<sub>n</sub>, Q<sub>2</sub>,..., Q<sub>m</sub>}U}
+</pre>
+
+onde <tt> U </tt> é o unificador mais geral de <tt>P<sub>1</sub></tt> e
+<tt>Q<sub>1</sub></tt>
+
+<p> ou em forma condicional 
+</p><pre>{R<sub>1</sub> \/ ... \/  R<sub>l</sub> &lt;= P<sub>1</sub> /\ ... /\ P<sub>n</sub>, Q<sub>1</sub> \/ ... \/  Q<sub>m</sub> &lt;= S<sub>1</sub> /\ ... /\ S<sub>k</sub>} |-  
+
+          { (R<sub>2</sub> \/ ... \/  R<sub>l</sub> \/... \/  Q<sub>m</sub> &lt;= P<sub>2</sub> /\ ... /\ P<sub>n</sub> /\ S<sub>1</sub> /\ ... /\ S<sub>k</sub>)U}
+</pre>
+onde <tt> U </tt> é o unificador mais geral de <tt>P<sub>1</sub></tt> e
+<tt>Q<sub>1</sub></tt>.
+
+
+<p>
+
+</p></dd><dt><a name="unificacao"><font color="red" size="+1"> Algoritmo
+ da Unificação</font></a>
+</dt><dd>
+<table>
+<tbody><tr>
+<th>Entrada:</th><td> Dois termos <tt>T1</tt> e  <tt>T2</tt>
+</td></tr>
+<tr>
+<th>Saída:</th><td> <tt>U</tt> unificador mais geral de <tt>T1</tt>, <tt>T2</tt>
+ ou <tt>falso</tt> 
+</td></tr>
+
+<tr>
+<th>Algoritmo:</th> 
+<td align="left"> Inicializar  <tt>U</tt>  como a substituição vazia, 
+uma pilha contendo a equação <tt>T1 = T2</tt> e  <tt> f :=falso </tt>
+<p>
+</p><pre>	Enquanto a pilha não estiver vazia e <tt> f=\= falso </tt>
+	   retira <tt>X=Y</tt> da pilha
+	   
+	   <b>caso</b>
+	    <tt>X</tt> é uma variável que não ocorre em  <tt>Y</tt>,
+	    substitui X por Y na pilha e adiciona <tt>X/Y<tt> a <tt>U</tt>  
+
+	    <tt>Y</tt> é uma variável que não ocorre em  <tt>X</tt>, 
+	    substitui Y por X na pilha e adiciona <tt>Y/X<tt> a <tt>U</tt> 
+	
+	    <tt>X</tt> e <tt>Y</tt> são variáveis idênticas, continua
+
+	    <tt>X=f(X<sub>1</sub>,...,X<sub>n</sub>)</tt> e <tt>y=f(Y<sub>1</sub>,...,Y<sub>n</sub>) </tt>
+	    coloca <tt>X<sub>i</sub>=Y<sub>i</sub></tt> na pilha para i=1..n
+
+	    caso contrário: f:=falso
+	
+	Se f=falso retorna falso senão U
+</tt></tt></tt></tt></pre>
+</td></tr>	
+</tbody></table>
+</dd><dt><a name="resolucaopl"><font color="red" size="+1"> Resolução em
+ programação em lógica</font></a>
+</dt><dd> A pergunta <tt>? A<sub>1</sub>, ... A<sub>n</sub></tt> 
+corresponde à formula lógica <tt> ~exists (A<sub>1</sub>/\ .../\ A<sub>n</sub>)</tt>.
+ Dado um programa <tt>P</tt>, por resolução pretende-se 
+<pre>P U {~exists (A<sub>1</sub>/\ .../\ A<sub>n</sub>)} |- falso 
+</pre>
+
+Por resolução, se se derivar <tt>falso</tt> com a substituição <tt>U=U<sub>1</sub>...U<sub>m</sub></tt>,
+ cada uma das <tt>U<sub>i</sub></tt> obtida num passo de resolução,  
+então <tt>U</tt> diz-se uma substituição solução e
+  <pre>P |= exists (A<sub>1</sub>/\ .../\ A<sub>n</sub>)U
+</pre>
+
+
+</dd><dt><a name="interpretador"><font color="red" size="+1"> 
+Interpretador abstracto para programas lógicos</font></a>
+</dt><dd>
+
+<table>
+<tbody><tr>
+<th>Entrada:</th><td> Um programa  <tt>P</tt> e  uma pergunta <tt>G</tt>
+</td></tr>
+<tr>
+<th>Saída:</th><td> <tt>GU</tt>, se é uma instância de <tt>G</tt> 
+deduzida de <tt>P</tt> ou  <tt>falso</tt> 
+</td></tr>
+
+<tr>
+<th>Algoritmo:</th> 
+<td> Inializa a resolvente com  <tt>G</tt>
+<br>
+<pre>Enquanto a resolvente não é vazia faça
+  	escolher um literal <tt>A</tt> da resolvente e uma cláusula 
+        <tt> A<sub>1</sub> &lt;= B<sub>1</sub>,...B<sub>n</sub></tt>, de <tt>P</tt> 
+	tal que   <tt>A</tt> e <tt> A<sub>1</sub></tt> unifiquem com u.m.g. <tt>U</tt>
+ (sair se tal unificador não existe) 
+
+ 	Remove  <tt>A</tt> e adiciona <tt>B<sub>1</sub>,...B<sub>n</sub></tt> à resolvente. 
+	
+	Aplica <tt>U</tt> à resolvente e a <tt>G</tt>
+
+Se a resolvente é vazia retorna <tt>G</tt>, senão <tt> falso</tt>
+<pre></pre></pre></td></tr>
+ 
+</tbody></table>
+
+</dd><dt><a name="sld"><font color="red" size="+1"> Resolução SLD 
+(selectiva linear para cláusulas definidas)</font></a>
+<p>
+Normalmente existem várias hipóteses na escolha das claúsulas usadas
+num passo de resolução. Contudo, a forma restrita a seguir apresentada
+é <b>completa</b> para cláusulas definidas, no sentido em que se
+deriva a cláusula vazia se e só se o conjunto de cláusulas inicial é
+não satisfazível.
+</p><p>
+</p></dt><dl>
+<dt><a name="sld_resol"><font color="red">Resolvente SLD</font></a>
+<p></p></dt><dd> Seja <tt>G</tt> uma pergunta  <tt>? A<sub>1</sub>, ... A<sub>n</sub></tt>
+ e <tt>C</tt> uma cláusula programa <tt> A :- B<sub>1</sub>,..., B<sub>q</sub></tt>.
+ Suponha que <tt>G</tt> e <tt>C</tt> não contêm variáveis em comum 
+(Como?). Seja <tt>U</tt> o u.m.g de <tt> A </tt> e  <tt> A<sub>m</sub></tt>.
+ Então <tt>G<sub>1</sub></tt> é  a <b>resolvente SLD</b>  de  <tt>G</tt>
+ e <tt>C</tt> via <tt>U</tt>:
+<pre> ? A<sub>1</sub>U, ..., A<sub>m-1</sub>U,B<sub>1</sub>U,..., B<sub>q</sub>U, A<sub>m+1</sub>U, ..., A<sub>n</sub>U
+</pre>
+
+</dd><dt><a name="sld_deriv"><font color="red">Derivação-SLD</font></a>
+<p>
+</p></dt><dd> É uma árvore finita ou infinita que consiste em perguntas
+<tt>G<sub>0</sub>, ... G<sub>n</sub>, ...</tt>, claúsulas programa
+<tt>C<sub>0</sub>, ..., C<sub>n</sub>, ...</tt> e substituições
+<tt>U<sub>1</sub>,... U<sub>n</sub>,...</tt> tal que, para
+todo <tt>n</tt>, <tt>G<sub>n+1</sub></tt> é a resolvente de
+<tt>G<sub>n</sub></tt> e <tt>C<sub>n</sub></tt> com substituição
+<tt>U<sub>n</sub></tt> e tal que as variáveis que ocorrem em
+<tt>C<sub>n+1</sub></tt> são distintas de todas as que ocorrem nas
+fórmulas e substituições anteriores (<tt>i=1..n</tt>)
+</dd><dt><a name="sld_regra"><font color="red">Regra de computação</font></a>
+<p></p></dt><dd>
+Regra (fixa) que, em cada passo da resolução SLD, permite  selecionar o 
+literal de <tt>G<sub>n</sub></tt> que é usado.
+
+Por exemplo, o literal mais à esquerda. Cada uma destas regras, dá 
+origem a uma árvore de derivação diferente. No entanto, a substituição 
+solução é a mesma independentemente da regra usada (<i>independência da 
+regra de computação</i>).
+</dd><dt><a name="sld_procura"><font color="red">Estratégia de procura</font></a>
+<p></p></dt><dd> Dada uma regra de computação, um programa <tt>P</tt> e 
+uma pergunta <tt>G</tt>  obtém-se uma única árvore de derivação SLD. No 
+entanto se esta árvore tiver nós com mais que um filho, então  o 
+processo de execução (computação) tem várias maneiras de a percorrer, 
+conduzindo à necessidade de estratégias de procura. Por exemplo: em 
+profundidade ou em largura primeiro.
+</dd></dl>
+
+</dl>
+
+
+</body></html>
